@@ -44,9 +44,11 @@ public class TransactionStepdefs {
     }
 
     @When("^I withdraw (.+) from my account at (.+)$")
-    public void iWithdrawFromMyAccountAt(float amount, String date) throws Throwable {
+    public void iWithdrawFromMyAccountAt(float amount, String date) throws ParseException {
         // Write code here that turns the phrase above into concrete actions
-        account.withdraw(amount, date);
+        try {
+            account.withdraw(amount, date);
+        } catch (IllegalArgumentException ignored) {}
     }
 
     @And("^my account expense at (.+) is (.+)$")
