@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="emptyAccount" class="ku.cs.models.Account"/>
+    <bean id="fullFillAccount" class="ku.cs.models.Account">
+        <constructor-arg value="200"/>
+        <constructor-arg value="14/09/2018 14:00"/>
+    </bean>
+</beans>
