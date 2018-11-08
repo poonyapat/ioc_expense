@@ -4,6 +4,7 @@ package ku.cs.models;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Account {
     private static final SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy HH:mm");
@@ -96,5 +97,9 @@ public class Account {
             return false;
         transaction.setAmount(amount);
         return true;
+    }
+
+    public List<Transaction> getTransactions(){
+        return transactions;
     }
 }
